@@ -1,6 +1,6 @@
-#ifndef link-list-mahasiswa_H
+#ifndef link_list_mahasiswa_H
 
-#define link-list-mahasiswa_H
+#define link_list_mahasiswa_H
 #define bool unsigned char // 0 - 255 integer
 
 typedef struct Node *address;
@@ -36,7 +36,7 @@ void DeleteFirst(address *p, int *X);
 void DeleteLast(address *p, int *X);
 void DeleteAfter(address *p, int *X);
 
-//PrintObject
+//PrintObject and Counting
 void PrintList (address p);
 int CountElements (address p);
 

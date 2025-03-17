@@ -58,6 +58,7 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "string.h": "c",
-    "link-list-mahasiswa.h": "c"
+    "link-list-mahasiswa.h": "c",
+    "link_list_mahasiswa.h": "c"
   }
 }

@@ -2,7 +2,7 @@
 #include <malloc.h>
 #include <stdlib.h>
 #include <string.h>
-#include "link-list-mahasiswa.h"
+#include "link_list_mahasiswa.h"
 
 #define nil NULL 
 #define true 1 
@@ -32,7 +32,7 @@ int getNilai (Mhs *Info)
 
 void setNama (Mhs *Info, char *NewName)
 {
-    Info->Nama = *NewName;
+    Info->Nama = NewName;
 }
 
 void setNilai (Mhs *Info, int nilai)
@@ -44,7 +44,7 @@ void setNilai (Mhs *Info, int nilai)
 void CreateNode (address *p)
 {
     *p = (address) malloc(sizeof(Node));
-    if (*p = nil)
+    if (*p == nil)
     {
         (*p)->Info.Nama = nil;
         (*p)->Info.Nilai = 0;
@@ -153,16 +153,27 @@ void DeleteAfter(address *p, int *X)
     }
 }
 
-//PrintObject
+//PrintObject and Counting
 void PrintList (address p)
 {
     address current = p;
     while (current != nil)
     {
-        printf("|%s|%d|->", (current)->Info.Nama, (current)->Info.Nilai);
+        printf("| %s | %d |->", (current)->Info.Nama, (current)->Info.Nilai);
         current = (current)->Next;
     }
     printf("\n");
+}
+
+int CountElements(address p) 
+{
+    int count = 0;
+    while (p != nil) 
+    {
+        count++;
+        p = p->Next;
+    }
+    return count;
 }
 
 //Sorting and Filtering
