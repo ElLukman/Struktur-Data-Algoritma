@@ -59,6 +59,7 @@
   "files.associations": {
     "string.h": "c",
     "link-list-mahasiswa.h": "c",
-    "link_list_mahasiswa.h": "c"
+    "link_list_mahasiswa.h": "c",
+    "linked.h": "c"
   }
 }
