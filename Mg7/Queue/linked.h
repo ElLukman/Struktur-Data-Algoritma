@@ -2,6 +2,7 @@
 #define linked_H
 #include "boolean.h"
 
+
 typedef struct Node *address;
 typedef struct Node
 {
