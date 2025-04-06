@@ -61,6 +61,8 @@
     "link-list-mahasiswa.h": "c",
     "link_list_mahasiswa.h": "c",
     "linked.h": "c",
-    "boolean.h": "c"
+    "boolean.h": "c",
+    "cstdlib": "c",
+    "type.h": "c"
   }
 }

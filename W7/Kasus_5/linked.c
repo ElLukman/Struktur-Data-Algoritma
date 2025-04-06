@@ -124,6 +124,7 @@ void DeleteAfter(address*PBefore, char *Nama)
 }
 
 void Dealloc(address *pNode)
+
 {
     if (*pNode != nil)
     {
