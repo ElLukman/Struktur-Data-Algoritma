@@ -63,6 +63,9 @@
     "linked.h": "c",
     "boolean.h": "c",
     "cstdlib": "c",
-    "type.h": "c"
+    "type.h": "c",
+    "stdbool.h": "c",
+    "stdio.h": "c",
+    "stdlib.h": "c"
   }
 }
