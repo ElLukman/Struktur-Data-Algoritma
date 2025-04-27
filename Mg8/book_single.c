@@ -1,5 +1,26 @@
 #include "book_single.h"
 
+// Handling
+void CreateBuku(address *p)
+{
+    // BUFFER (VAR_LOKAL)
+    char judul_buku[100];
+    int stok_buku;
+
+    printf("Masukan Judul Buku: ");
+    fgets(judul_buku, sizeof(judul_buku), stdin);
+    judul_buku[strcspn(judul_buku, "\n")] = '\0';
+
+    printf("Masukan Stok Buku: ");
+    scanf(" %d", &stok_buku);
+    getchar();
+
+    CreateNodeSingle(p);
+    FillNodeSingle(p, judul_buku, stok_buku);
+
+}
+
+// Delete
 void DeleteFirstBookSingle (address *p)
 {
     address temp = nil;

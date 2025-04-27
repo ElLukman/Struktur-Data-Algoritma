@@ -4,6 +4,10 @@
 #include "single.h"
 #include "queue_single.h"
 
+// HANDLING 
+void CreateBuku(address *p);
+
+
 // DELETE 
 void DeleteFirstBookSingle (address *p);
 void DeleteLastBookSingle (address *p);

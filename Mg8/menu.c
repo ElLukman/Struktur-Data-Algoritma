@@ -24,7 +24,7 @@ void SUB_MENU_SLL()
     printf("=========================================\n");
     printf("            Single Linked List           \n");
     printf("=========================================\n");
-    printf("1. Add Buku\n");
+    printf("1. Create Buku\n");
     printf("2. Edit Buku\n");
     printf("3. Delete Buku\n");
     printf("4. Create Anggota\n");
@@ -32,7 +32,7 @@ void SUB_MENU_SLL()
     printf("6. Delete Anggota\n");
     printf("7. Pinjam Buku\n");
     printf("8. Kembalikan Buku\n");
-    printf("9. Tampilkan Visual\n");
+    printf("9. Print Visual\n");
     printf("10. Exit\n");
     printf("=========================================\n");
     printf("\nPilihan menu : ");
@@ -85,9 +85,12 @@ void SUB_MENU_ARR()
 }
 
 // 1. Add Buku
-void MENU_INPUT_JUDULBUKU()
+void MENU_TITLE_CREATE_BUKU()
 {
-    printf("Tuliskan judul buku: ");
+    system("cls");
+    printf("===============================\n");
+    printf("           Create Buku         \n");
+    printf("===============================\n");
 }
 
 void MENU_INPUT_STOKBUKU()
@@ -177,4 +180,14 @@ void TAMPILKAN_VISUAL()
 void MENU_PILIH_ORANG()
 {
     printf("Pilih anggota: ");
+}
+
+void MENU_WARNING()
+{
+    while (pil_menu < 1 && pil_menu > 4)
+    {
+        system("cls");
+        printf("\n MASUKAN INPUT YANG VALID! \n");
+        MENU_AWAL();
+    }
 }
