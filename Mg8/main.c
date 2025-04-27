@@ -1,4 +1,7 @@
-#include "common.h"
+#include "menu.h"
+#include "single.h"
+// #include "double.h"
+// #include "array.h"
 
 int main ()
 {

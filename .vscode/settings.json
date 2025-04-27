@@ -66,6 +66,7 @@
     "type.h": "c",
     "stdbool.h": "c",
     "stdio.h": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "conio.h": "c"
   }
 }
