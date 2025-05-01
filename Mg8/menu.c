@@ -14,8 +14,6 @@ void MENU_AWAL()
     printf("4. Exit\n");
     printf("=========================================\n");
     printf("\nPilihan menu : ");
-    scanf("%d", &pil_menu);
-    getch();
 }
 
 void SUB_MENU_SLL()
@@ -36,8 +34,6 @@ void SUB_MENU_SLL()
     printf("10. Exit\n");
     printf("=========================================\n");
     printf("\nPilihan menu : ");
-    scanf("%d", &pil_sub_menu1);
-    getch();
 }
 
 void SUB_MENU_DLL()
@@ -58,8 +54,6 @@ void SUB_MENU_DLL()
     printf("10. Exit\n");
     printf("=========================================\n");
     printf("\nPilihan menu : ");
-    scanf("%d", &pil_sub_menu1);
-    getch();
 }
 
 void SUB_MENU_ARR()
@@ -80,8 +74,6 @@ void SUB_MENU_ARR()
     printf("10. Exit\n");
     printf("=========================================\n");
     printf("\nPilihan menu : ");
-    scanf("%d", &pil_sub_menu1);
-    getch();
 }
 
 // 1. Add Buku
@@ -93,37 +85,25 @@ void MENU_TITLE_CREATE_BUKU()
     printf("===============================\n");
 }
 
-void MENU_INPUT_STOKBUKU()
-{
-    printf("Masukan jumlah stok buku: ");
-}
-
 // 2. Edit Buku
-void MENU_EDIT_PILIHBUKU()
+void MENU_TITLE_EDIT_BUKU()
 {
-    printf("Pilih buku yang ingin diedit: ");
-}
-
-void MENU_EDIT_JUDULBUKU()
-{
-    printf("Tuliskan judul baru: ");
-}
-
-void MENU_EDIT_STOKBUKU()
-{
-    printf("Edit stok buku: ");
+    system("cls");
+    printf("===============================\n");
+    printf("           Edit Buku           \n");
+    printf("===============================\n");
 }
 
 // 3. Delete Buku
-void MENU_DELETE_BUKU()
-{
-    printf("Pilih buku yang ingin dihapus: ");
-}
 
 // 4. Create Anggota
-void MENU_INPUT_NAMA_ANGGOTA()
+
+void MENU_TITLE_CREATE_ANGGOTA()
 {
-    printf("Tuliskan nama anggota: ");
+    system("cls");
+    printf("===============================\n");
+    printf("         Create Anggota        \n");
+    printf("===============================\n"); 
 }
 
 void MENU_INPUT_LEVEL_ANGGOTA()
@@ -136,9 +116,13 @@ void MENU_INPUT_LEVEL_ANGGOTA()
 }
 
 // 5. Edit Anggota 
-void MENU_EDIT_NAMA_ANGGOTA()
+
+void MENU_TITLE_EDIT_ANGGOTA()
 {
-    printf("Edit nama anggota: ");
+    system("cls");
+    printf("===============================\n");
+    printf("         Edit Anggota          \n");
+    printf("===============================\n"); 
 }
 
 void MENU_EDIT_LEVEL_ANGGOTA()
@@ -151,22 +135,12 @@ void MENU_EDIT_LEVEL_ANGGOTA()
 }
 
 // 6. Delete Anggota
-void MENU_DELETE_ANGGOTA()
-{
-    printf("Pilih anggota yang ingin dihapus: ");
-}
+
 
 // 7. Pinjam Buku
-void MENU_PILIH_BUKU()
-{
-    printf("Pilih buku yang ingin dipinjam: ");
-}
 
 // 8. Kembalikan Buku 
-void MENU_KEMBALIKAN_BUKU()
-{
-    printf("Pilih buku yang ingin dikembalikan: ");
-}
+
 
 // 9. Tampilkan Visual
 void TAMPILKAN_VISUAL()
@@ -177,11 +151,6 @@ void TAMPILKAN_VISUAL()
 }
 
 // Other 
-void MENU_PILIH_ORANG()
-{
-    printf("Pilih anggota: ");
-}
-
 void MENU_WARNING()
 {
     while (pil_menu < 1 && pil_menu > 4)
@@ -189,5 +158,20 @@ void MENU_WARNING()
         system("cls");
         printf("\n MASUKAN INPUT YANG VALID! \n");
         MENU_AWAL();
+        scanf("%d", &pil_menu);
+        getchar(); 
     }
+}
+
+void PAUSE()
+{
+    printf("Tekan ENTER untuk melanjutkan...");
+    getchar();
+}
+
+void CLEARBUFFER()
+{
+    // CLEAR BUFFER
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
 }

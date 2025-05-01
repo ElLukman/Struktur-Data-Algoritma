@@ -4,7 +4,7 @@
 // Constructor
 void CreateNodeSingle (address *p)
 {
-    *p = (address) malloc(sizeof(NodeElmt));
+    *p = (address) malloc(sizeof(Node));
     if (*p == nil)
     {printf("Alokasi gagal\n");}
 }
@@ -22,9 +22,9 @@ void FillNodeSingle (address *p, char *nama, int status)
 // Insert 
 void InsertFirstSingle (address *p, address pNew)
 {
-    if (*p != nil)
+    if (pNew != nil)
     {
-        (pNew)->next = *p;
+        pNew->next = *p;
         *p = pNew;
     }
     else {printf("Node belum dialokasi\n");}
@@ -34,15 +34,15 @@ void InsertLastSingle (address *p, address pNew)
 {
     address current = *p;
 
-    if (*p != nil)
+    if (pNew != nil)
     {
-        if (isEmpty(p))
+        if (isEmptySingle(*p))
         {
             *p = pNew;
         }
         else 
         {
-            while (current != nil)
+            while (current->next != nil)
             {
                 current = (current)->next;
             }
@@ -61,7 +61,7 @@ void InsertAfterNameSingle (address *pBef, char *nama_target, address pNew)
         current = (current)->next;
     }
 
-    if (*pBef != nil && pNew != nil)
+    if (current != nil && pNew != nil)
     {
         (pNew)->next = (current)->next;
         (current)->next = pNew;
@@ -69,22 +69,6 @@ void InsertAfterNameSingle (address *pBef, char *nama_target, address pNew)
     else {printf("Node belum dialokasi\n");}
 }
 
-// Modify 
-address ModifyByNamaSingle (address *p, char *nama_target, char *nama_baru, int status)
-{
-    address current = *p; 
-
-    while (current != nil && strcmp((current)->nama, nama_target) != 0)
-    {
-        current = (current)->next;
-    }
-
-    if (current != nil)
-    {
-        (current)->nama = strdup(nama_baru);
-        (current)->status = status; 
-    }
-}
 
 // Other 
 boolean isEmptySingle (address p)

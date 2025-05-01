@@ -6,11 +6,15 @@
 
 // HANDLING 
 void CreateBuku(address *p);
+void EditBuku(address p);
+void PrintListBuku(address *p);
 
 
 // DELETE 
+/* UNDER CONS
 void DeleteFirstBookSingle (address *p);
 void DeleteLastBookSingle (address *p);
-void DeleteBookByNameSingle (address *p, char *name_target);
+void DeleteBookByNameSingle (address *p, char *name_target)
 
+*/
 #endif

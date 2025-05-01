@@ -10,23 +10,35 @@ void SUB_MENU_DLL();
 void SUB_MENU_ARR();
 
 // FUNCTION SUB MENU
+// 1. Add Buku
 void MENU_TITLE_CREATE_BUKU();
-void MENU_INPUT_STOKBUKU();
-void MENU_EDIT_PILIHBUKU();
-void MENU_EDIT_JUDULBUKU();
-void MENU_EDIT_STOKBUKU();
-void MENU_DELETE_BUKU();
-void MENU_INPUT_NAMA_ANGGOTA();
+
+// 2. Edit Buku
+void MENU_TITLE_EDIT_BUKU();
+
+// 3. Delete Buku
+
+// 4. Create Anggota
+void MENU_TITLE_CREATE_ANGGOTA();
 void MENU_INPUT_LEVEL_ANGGOTA();
-void MENU_EDIT_NAMA_ANGGOTA();
+
+// 5. Edit Anggota
+void MENU_TITLE_EDIT_ANGGOTA();
 void MENU_EDIT_LEVEL_ANGGOTA();
-void MENU_DELETE_ANGGOTA();
-void MENU_PILIH_BUKU();
-void MENU_KEMBALIKAN_BUKU();
+
+// 6. Delete Anggota
+
+// 7. Pinjam Buku 
+
+// 8. Kembalikan Buku 
+
+// 9. Tampilkan Visual 
 void TAMPILKAN_VISUAL();
 
 // Other 
-void MENU_PILIH_ORANG();
 void MENU_WARNING();
+void PAUSE();
+void CLEARBUFFER();
+
 
 #endif 

@@ -8,9 +8,9 @@
 #include <stdbool.h>
 
 // MENU HANDLING 
-int pil_menu; 
-int pil_sub_menu1;
-int pil_sub_menu2;
+extern int pil_menu; 
+extern int pil_sub_menu1;
+extern int pil_sub_menu2;
 
 // JABATAN
 #define DOSEN -1

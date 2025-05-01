@@ -2,18 +2,18 @@
 #define SINGLE_LINKED_LIST_H
 #include "common.h"
 #include "boolean.h"
-#include "queue_single.h"
-#include "book_single.h"
 
-// Deklarasi data
-
+// Dependensi
+struct Node;
 typedef struct Node *address;
+
+// Deklarasi Data
 typedef struct Node
 {
     char *nama; 
     int status;
     address next;
-} NodeElmt;
+} Node;
 
 // ================================================
 // NODE HANDLING
@@ -28,14 +28,7 @@ void InsertFirstSingle (address *p, address pNew);
 void InsertLastSingle (address *p, address pNew);
 void InsertAfterNamaSingle (address *pBef, char *nama_target, address pNew);
 
-// Modify
-address ModifyByNamaSingle (address *p, char *nama_target, char *nama_baru, int status);
-
 // Other 
 boolean isEmptySingle (address p);
-
-// ================================================
-// PROCESS HANDLING
-// ================================================
 
 #endif

@@ -2,7 +2,9 @@
 #define QUEUE_SINGLE_H
 
 #include "single.h"
+#include "book_single.h"
 
+typedef struct Node *address;
 typedef struct QueueAnggotaSingle
 {
     address front; 
@@ -11,21 +13,28 @@ typedef struct QueueAnggotaSingle
     int size;
 } QueueAnggotaSingle;
 
-// Anggota Handling
-void PinjamBukuSingle();
-// Pilih buku dulu 
-// Cek status
-// Ngantri
-// IF STOK MASIH ADA
-//      THEN MASIH NGANTRI SESUAI URUTAN 
-// IF STOK TIDAK ADA 
-//      THEN NGANTRI SETELAH REAR BARU ATURAN BERLAKU
-// CONCLUSION: QUEUE JADI ADA 2 (1. Yang sedang diproses, 2. Yang sedang booking antrian)
+// Anggota Handler
+void CreateAnggota(address *p);
+void EditAnggota(address p);
+void PrintListAnggota(address *p);
 
-void KembalikanBukuSingle();
-// Rear 
-// 
+// Function declarations for queue operations
+void CreateQueueSingle(QueueAnggotaSingle *q);
+void EnqueueAnggota(QueueAnggotaSingle *q, address anggota, address buku);
+address DequeueAnggota(QueueAnggotaSingle *q);
 
+// Peminjaman buku handler
+void PinjemBukuSingle(address *buku, address anggota, QueueAnggotaSingle *q);
+void KembalikanBukuSingle(address *buku, address anggota, QueueAnggotaSingle *q);
+
+// Other
+boolean isQueueEmpty(QueueAnggotaSingle q);
+
+/*
+// Queue operations for future implementation
+void PinjamBukuSingle(address *buku, QueueAnggotaSingle *q, address anggota);
+void KembalikanBukuSingle(address *buku, QueueAnggotaSingle *q);
+*/
 
 
 #endif
