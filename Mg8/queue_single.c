@@ -192,11 +192,10 @@ void CreateQueueSingle(QueueAnggotaSingle *q)
 }
 
 // Priority Queue
-int getPriority(int status)
-{
-    if (status == DOSEN) return -1;
-    else if (status == MHS) return -2; 
-    else if (status == MASSA) return -3;
+int getPriority(int status) {
+    if (status == DOSEN) return 1;
+    else if (status == MHS) return 2;
+    else return 3;
 }
 
 // Add new member to queue based on priority
@@ -284,13 +283,16 @@ address DequeueAnggota(QueueAnggotaSingle *q)
 
 void PinjamBukuSingle(address *buku, QueueAnggotaSingle *q, address anggota)
 {
-    // Implementation will go here
+    MENU_TITLE_PINJAM_BUKU();  
+    PrintListBuku(buku);
+    printf("\n Pilih buku yang mau dipinjam");
+    
 }
 
 // Future implementation for book return
 void KembalikanBukuSingle(address *buku, address anggota, QueueAnggotaSingle *q)
 {
-    // Implementation will go here
+    MENU_TITLE_KEMBALIKAN_BUKU();
 }
 
 // Other

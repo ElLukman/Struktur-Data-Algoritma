@@ -138,9 +138,22 @@ void MENU_EDIT_LEVEL_ANGGOTA()
 
 
 // 7. Pinjam Buku
+void MENU_TITLE_PINJAM_BUKU()
+{
+    system("cls");
+    printf("===============================\n");
+    printf("          Pinjam Buku          \n");
+    printf("===============================\n"); 
+}
 
 // 8. Kembalikan Buku 
-
+void MENU_TITLE_KEMBALIKAN_BUKU()
+{
+    system("cls");
+    printf("===============================\n");
+    printf("        Kembalikan Buku        \n");
+    printf("===============================\n"); 
+}
 
 // 9. Tampilkan Visual
 void TAMPILKAN_VISUAL()
